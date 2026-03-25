@@ -1,7 +1,5 @@
 # Chương 2: Kỹ thuật đếm
 
-[TOC]
-
 ## §1. Đệ quy và Hệ thức truy hồi
 
 ### 1. Định nghĩa bằng đệ quy (Recursive Definition)
@@ -35,7 +33,7 @@ Xét hàm $f(n) = n!$.
 
 #### Hệ thức truy hồi tuyến tính thuần nhất với hệ số hằng
 > **Định nghĩa 2**: Một hệ thức truy hồi tuyến tính thuần nhất bậc `k` với hệ số hằng có dạng:
-> $$ a_n = c_1a_{n-1} + c_2a_{n-2} + \cdots + c_ka_{n-k} $$
+> $$a_n = c_1a_{n-1} + c_2a_{n-2} + \cdots + c_ka_{n-k}$$
 > trong đó $c_1, c_2, ..., c_k$ là các hằng số thực và $c_k \neq 0$.
 
 **Ví dụ:**
@@ -46,16 +44,19 @@ Xét hàm $f(n) = n!$.
 #### Phương pháp giải
 **Bước 1: Tìm phương trình đặc trưng**
 Ta tìm nghiệm của hệ thức truy hồi dưới dạng $a_n = \lambda^n$, với $\lambda$ là hằng số. Thay vào hệ thức truy hồi, ta có:
+
 $\lambda^n = c_1\lambda^{n-1} + c_2\lambda^{n-2} + \cdots + c_k\lambda^{n-k}$
+
 Chia cả hai vế cho $\lambda^{n-k}$ (với $\lambda \neq 0$), ta được **phương trình đặc trưng**:
-$$ \lambda^k - c_1\lambda^{k-1} - c_2\lambda^{k-2} - \cdots - c_k = 0 $$
+
+$$\lambda^k - c_1\lambda^{k-1} - c_2\lambda^{k-2} - \cdots - c_k = 0$$
 
 **Bước 2: Tìm nghiệm của phương trình đặc trưng và xây dựng nghiệm tổng quát**
 Giả sử phương trình đặc trưng có các nghiệm $\lambda_1, \lambda_2, ..., \lambda_k$.
 - **Trường hợp các nghiệm phân biệt**: Nếu phương trình có `k` nghiệm thực phân biệt $\lambda_1, \lambda_2, ..., \lambda_k$, thì nghiệm tổng quát của hệ thức truy hồi là:
-  $$ a_n = \alpha_1\lambda_1^n + \alpha_2\lambda_2^n + \cdots + \alpha_k\lambda_k^n $$
+  $$a_n = \alpha_1\lambda_1^n + \alpha_2\lambda_2^n + \cdots + \alpha_k\lambda_k^n$$
 - **Trường hợp có nghiệm bội**: Nếu $\lambda_1$ là một nghiệm bội bậc `m`, các nghiệm còn lại là phân biệt, thì nghiệm tổng quát có dạng:
-  $$ a_n = (\alpha_1 + \alpha_2n + \cdots + \alpha_mn^{m-1})\lambda_1^n + \alpha_{m+1}\lambda_{m+1}^n + \cdots $$
+  $$a_n = (\alpha_1 + \alpha_2n + \cdots + \alpha_mn^{m-1})\lambda_1^n + \alpha_{m+1}\lambda_{m+1}^n + \cdots$$
 
 **Bước 3: Tìm các hằng số $\alpha_i$**
 Sử dụng các điều kiện ban đầu (giá trị của $a_0, a_1, ...$) để lập một hệ phương trình tuyến tính và giải tìm các hằng số $\alpha_1, \alpha_2, ...$.
@@ -85,11 +86,11 @@ Giải hệ thức $a_n = 6a_{n-1} - 9a_{n-2}$ với $a_0 = 1, a_1 = 6$.
 
 ### 1. Quy tắc cộng
 > **Phát biểu**: Nếu một công việc có thể được thực hiện theo một trong `k` phương án $T_1, T_2, ..., T_k$ (loại trừ lẫn nhau), trong đó phương án $T_i$ có $n_i$ cách thực hiện, thì tổng số cách để hoàn thành công việc là:
-> $$ n_1 + n_2 + \cdots + n_k $$
+> $$n_1 + n_2 + \cdots + n_k$$
 
 ### 2. Quy tắc nhân
 > **Phát biểu**: Nếu một công việc được chia thành `k` giai đoạn nối tiếp $T_1, T_2, ..., T_k$, trong đó giai đoạn $T_i$ có $n_i$ cách thực hiện (sau khi các giai đoạn trước đã hoàn thành), thì tổng số cách để hoàn thành toàn bộ công việc là:
-> $$ n_1 \times n_2 \times \cdots \times n_k $$
+> $$n_1 \times n_2 \times \cdots \times n_k$$
 
 ### 3. Chỉnh hợp và Tổ hợp (Suy rộng)
 
@@ -110,7 +111,7 @@ Có bao nhiêu cách chọn 5 tờ tiền từ một két có 7 loại tiền kh
 
 ### 4. Hoán vị lặp
 > Số hoán vị của `n` phần tử, trong đó có $n_1$ phần tử loại 1 giống nhau, $n_2$ phần tử loại 2 giống nhau, ..., $n_k$ phần tử loại `k` giống nhau ($n_1 + n_2 + ... + n_k = n$) là:
-> $$ \frac{n!}{n_1! n_2! \cdots n_k!} $$
+> $$\frac{n!}{n_1! n_2! \cdots n_k!}$$
 
 **Ví dụ:**
 Có bao nhiêu xâu khác nhau có thể tạo thành bằng cách sắp xếp lại các chữ cái của từ "SUCCESS"?
@@ -132,7 +133,8 @@ Có bao nhiêu xâu khác nhau có thể tạo thành bằng cách sắp xếp l
 
 **Chứng minh (bằng phản chứng):**
 Giả sử không có hộp nào chứa nhiều hơn $\lceil \frac{N}{k} \rceil - 1$ đồ vật. Khi đó, tổng số đồ vật trong `k` hộp sẽ không vượt quá:
-$$ k \times \left( \lceil \frac{N}{k} \rceil - 1 \right) $$
+
+$$k \times \left( \lceil \frac{N}{k} \rceil - 1 \right)$$
 Ta biết rằng $\frac{N}{k} \le \lceil \frac{N}{k} \rceil < \frac{N}{k} + 1$.
 Suy ra $\lceil \frac{N}{k} \rceil - 1 < \frac{N}{k}$.
 Do đó, tổng số vật nhỏ hơn $k \times \frac{N}{k} = N$. Điều này mâu thuẫn với giả thiết ban đầu là có `N` đồ vật. Vậy giả sử là sai.
