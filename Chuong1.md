@@ -367,7 +367,7 @@ $f(x,y) = \bar{x}y + xy$
 | **$\bar{x}$ (0)** | 0 | **1** |
 | **$x$ (1)** | 0 | **1** |
 
-*Nhóm 1 cột bên phải (cột y), ta được $f(x,y) = y$*
+Nhóm 1 cột bên phải (cột y), ta được $f(x,y) = y$
 
 **6.2. Biểu đồ Karnaugh 3 biến**
 $f(x,y,z) = \bar{x}y\bar{z} + \bar{x}yz + xyz + xy\bar{z}$
@@ -377,4 +377,4 @@ $f(x,y,z) = \bar{x}y\bar{z} + \bar{x}yz + xyz + xy\bar{z}$
 | **$\bar{x}$ (0)** | 0 | 0 | **1** | **1** |
 | **$x$ (1)** | 0 | 0 | **1** | **1** |
 
-*Nhóm 4 ô (một hình vuông 2x2 ở nửa bên phải). Trong khối này $x$ thay đổi (từ 0 lên 1), $z$ thay đổi (từ 1 về 0), chỉ có $y$ giữ nguyên giá trị 1. Vậy $f(x,y,z) = y$.*
+Nhóm 4 ô (một hình vuông 2x2 ở nửa bên phải). Trong khối này $x$ thay đổi (từ 0 lên 1), $z$ thay đổi (từ 1 về 0), chỉ có $y$ giữ nguyên giá trị 1. Vậy $f(x,y,z) = y$.
